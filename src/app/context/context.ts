@@ -7,7 +7,13 @@ const IPortfolio = {
     subtitle: '',
     cta: ''
   },
-  about: {},
+  about: {
+    img: '',
+    paragraphOne: '',
+    paragraphTwo: '',
+    paragraphThree: '',
+    resume: ''
+  },
   contact: {},
   projects: [{}],
   footer: {},

@@ -5,6 +5,7 @@ import Hero from '@/app/components/Hero/Hero'
 
 
 import { heroData, aboutData, projectsData, contactData, footerData } from '@/app/mock/data';
+import About from './components/About/About';
 
 export default function Home() {
   const [hero, setHero] = useState({
@@ -13,7 +14,13 @@ export default function Home() {
     subtitle: '',
     cta: ''
   });
-  const [about, setAbout] = useState({});
+  const [about, setAbout] = useState({
+    img: '',
+    paragraphOne: '',
+    paragraphTwo: '',
+    paragraphThree: '',
+    resume: ''
+  });
   const [projects, setProjects] = useState([{}]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
@@ -29,6 +36,7 @@ export default function Home() {
   return (
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Hero />
+      <About />
     </PortfolioProvider>
   );
 }
