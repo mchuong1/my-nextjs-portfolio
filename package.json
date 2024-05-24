@@ -14,7 +14,8 @@
     "react-awesome-reveal": "^4.2.11",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18",
-    "react-scroll": "^1.9.0"
+    "react-scroll": "^1.9.0",
+    "sass": "^1.77.2"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <section id="hero" className="jumbotron">
       <Container>
-        <Fade direction={(isMobile ? "down" : "left")} duration={1000} delay={500} fraction={0.3}>
+        <Fade direction={(isMobile ? "down" : "left")} duration={1000} delay={500}>
           <h1 className="hero-title">
             {title || 'Hi, my name is'}{' '}
             <span className="text-color-main">{name || 'Your Name'}</span>
@@ -32,7 +32,7 @@ const Header = () => {
             {subtitle || "I'm the Unknown Developer."}
           </h1>
         </Fade>
-        <Fade direction={isMobile ? "down" : "left" } duration={1000} delay={1000} fraction={0.3}>
+        <Fade direction={isMobile ? "down" : "left" } duration={1000} delay={1000}>
           <p className="hero-cta">
             <span className="cta-btn cta-btn--hero">
               <Link to="about" smooth duration={1000}>
