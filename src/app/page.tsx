@@ -1,11 +1,11 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { PortfolioProvider } from "./context/context";
-import Hero from '@/app/components/Hero/Hero'
+import { heroData, aboutData, projectsData, contactData, footerData } from './mock/data';
+import Hero from './components/Hero/Hero'; // Import the missing module
 
-
-import { heroData, aboutData, projectsData, contactData, footerData } from '@/app/mock/data';
 import About from './components/About/About';
+import Projects from './components/Projects/Projects';
 
 export default function Home() {
   const [hero, setHero] = useState({
@@ -21,7 +21,15 @@ export default function Home() {
     paragraphThree: '',
     resume: ''
   });
-  const [projects, setProjects] = useState([{}]);
+  const [projects, setProjects] = useState([{
+    title: '',
+    info: '',
+    info2: '',
+    url: '',
+    repo: '',
+    img: '',
+    id: ''
+  }]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
 
@@ -37,6 +45,7 @@ export default function Home() {
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Hero />
       <About />
+      <Projects />
     </PortfolioProvider>
   );
 }

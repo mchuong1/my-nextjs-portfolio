@@ -15,7 +15,15 @@ const IPortfolio = {
     resume: ''
   },
   contact: {},
-  projects: [{}],
+  projects: [{
+    title: '',
+    info: '',
+    info2: '',
+    url: '',
+    repo: '',
+    img: '',
+    id: ''
+  }],
   footer: {},
 }
 

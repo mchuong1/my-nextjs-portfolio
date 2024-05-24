@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 
-const AboutImg = ({ filename, alt } : { filename: string, alt: string }) => {
+const ProjectImg = ({ filename, alt } : { filename: string, alt: string }) => {
   const [imagePath, setImagePath] = React.useState('');
 
   React.useEffect(() => {
@@ -22,16 +22,21 @@ const AboutImg = ({ filename, alt } : { filename: string, alt: string }) => {
     };
   }, [filename]);
 
+  /**
+   * TODO: Fix Project size
+   * it needs to be dynamic and resizable according to window size
+   */
+
   return (
     <Image
       className="rounded shadow-lg"
       alt={alt}
       src={imagePath}
-      width={350}
-      height={263}
+      width={657}
+      height={313}
       style={{
-        height: '263px',
-        width: '350px',
+        height: '313px',
+        width: '657px',
         position: 'unset',
         objectFit: 'cover'
       }}
@@ -39,9 +44,9 @@ const AboutImg = ({ filename, alt } : { filename: string, alt: string }) => {
   );
 };
 
-AboutImg.propTypes = {
+ProjectImg.propTypes = {
   filename: PropTypes.string,
   alt: PropTypes.string,
 };
 
-export default AboutImg;
+export default ProjectImg;
