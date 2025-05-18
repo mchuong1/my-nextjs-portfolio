@@ -26,6 +26,7 @@ const AboutImg = ({ filename, alt } : { filename: string, alt: string }) => {
   }, [filename]);
 
   return (
+    <>
     {imagePath ? (
       <Image
         className="rounded shadow-lg"
@@ -41,6 +42,7 @@ const AboutImg = ({ filename, alt } : { filename: string, alt: string }) => {
         }}
       />
     ) : null}
+    </>
   );
 };
 
