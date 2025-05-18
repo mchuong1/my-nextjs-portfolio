@@ -15,6 +15,9 @@ const AboutImg = ({ filename, alt } : { filename: string, alt: string }) => {
         if (!signal.aborted) {
           setImagePath(data.imagePath);
         }
+      })
+      .catch((error) => {
+        console.error('Error fetching image:', error)
       });
   
     return () => {
@@ -26,7 +29,7 @@ const AboutImg = ({ filename, alt } : { filename: string, alt: string }) => {
     <Image
       className="rounded shadow-lg"
       alt={alt}
-      src={imagePath}
+      src={imagePath ?? null}
       width={350}
       height={263}
       style={{
