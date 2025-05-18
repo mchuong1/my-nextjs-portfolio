@@ -31,19 +31,21 @@ const ProjectImg = ({ filename, alt } : { filename: string, alt: string }) => {
    */
 
   return (
-    <Image
-      className="rounded shadow-lg"
-      alt={alt}
-      src={imagePath ?? null}
-      width={657}
-      height={313}
-      style={{
-        height: '313px',
-        width: '657px',
-        position: 'unset',
-        objectFit: 'cover'
-      }}
-    />
+    {imagePath ? (
+      <Image
+        className="rounded shadow-lg"
+        alt={alt}
+        src={imagePath}
+        width={657}
+        height={313}
+        style={{
+          height: '313px',
+          width: '657px',
+          position: 'unset',
+          objectFit: 'cover'
+        }}
+      />
+    ) : null}
   );
 };
 

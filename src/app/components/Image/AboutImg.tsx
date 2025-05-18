@@ -26,19 +26,21 @@ const AboutImg = ({ filename, alt } : { filename: string, alt: string }) => {
   }, [filename]);
 
   return (
-    <Image
-      className="rounded shadow-lg"
-      alt={alt}
-      src={imagePath ?? null}
-      width={350}
-      height={263}
-      style={{
-        height: '263px',
-        width: '350px',
-        position: 'unset',
-        objectFit: 'cover'
-      }}
-    />
+    {imagePath ? (
+      <Image
+        className="rounded shadow-lg"
+        alt={alt}
+        src={imagePath}
+        width={350}
+        height={263}
+        style={{
+          height: '263px',
+          width: '350px',
+          position: 'unset',
+          objectFit: 'cover'
+        }}
+      />
+    ) : null}
   );
 };
 
